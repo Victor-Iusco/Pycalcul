@@ -44,9 +44,14 @@ def tangent(x):
 def cotangent(x):
     return 1 / math.tan(x)
 
+def percentage1(x, y):
+    return (x/y)*100
+    
+def percentage2(x, y):
+    return (x/100)*y
 
 
-print("Select operation.")
+print("Select operation:")
 print("1.Add")
 print("2.Subtract")
 print("3.Multiply")
@@ -62,6 +67,8 @@ print("12.Cosine")
 print("13.Tangent")
 print("14.Cotangent")
 print("15.Exit")
+print("16.Percentage(a from b)")
+print("17.Percentage(a percent of b)")
 
 while True:
     choice = input("Enter choice: ")
@@ -69,7 +76,7 @@ while True:
         print("Exiting...")
         sys.exit()
     
-    if choice in ('1', '2', '3', '4', '5', '6'):
+    if choice in ('1', '2', '3', '4', '5', '6', '16', '17'):
         try:
             num1 = float(input("Enter first number: "))
             num2 = float(input("Enter second number: "))
@@ -94,6 +101,12 @@ while True:
         
         elif choice == '6':
             print(num1, "^", num2, "=", power(num1, num2))
+
+        elif choice == '16':
+            print(num1, "%->", num2, "=", percentage1(num1, num2))
+
+        elif choice == '17':
+            print(num1, "%", " of", num2, "=", percentage2(num1, num2))
           
     if choice in ('7', '8', '9', '10', '11', '12', '13', '14', '15'):
         try:
