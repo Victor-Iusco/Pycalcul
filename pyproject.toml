@@ -4,8 +4,8 @@ build-backend = "poetry.core.masonry.api"
 
 [tool.poetry]
 name = "pycalcul"
-version = "1.0"
+version = "2.1"
 description = "my very first calculator"
 readme = "readme.txt"
-authors = [ "LOLpotatoe <victorstefaniusco@gmail.com>",]
+authors = [ "LOLpotatoe <victorstefaniusco@gmail.com>", "rares9301 <raressarmasag@gmail.com>", ]
 license = "GPT-3"

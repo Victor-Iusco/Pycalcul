@@ -143,7 +143,7 @@ while True:
     if next_calculation == "no":
         sys.exit()
 else:
-    print("Invalid input. Please enter a number from 1 to 15.")
+    print("Invalid input. Please enter a number from 1 to 17.")
 
     
     
