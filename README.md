@@ -1,6 +1,6 @@
-Pycalcul is my first project in my python programming adventure. Me and my college @rares9301 started small but we will try to implement as many features as possible.
+# Pycalcul is my first project in my python programming adventure. Me and my college @rares9301 started small but we will try to implement as many features as possible.
 
-How to download:
+## How to download:
 
 1 Install python on yout computer (python 3.10 or higher)
 
