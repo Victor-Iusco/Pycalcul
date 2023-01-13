@@ -26,6 +26,9 @@ def square_root(x):
 def logarithm(x):
     return math.log(x)
 
+def logarithm_generalised(x, y):
+    return math.log(x, y)
+
 def exponential(x):
     return math.exp(x)
 
@@ -59,7 +62,7 @@ print("4.Divide")
 print("5.Rest of division")
 print("6.Power")
 print("7.Square root")
-print("8.Logarithm")
+print("8.Natural Logarithm")
 print("9.Exponential")
 print("10.Factorial")
 print("11.Sine")
@@ -69,6 +72,7 @@ print("14.Cotangent")
 print("15.Exit")
 print("16.Percentage(a from b)")
 print("17.Percentage(a percent of b)")
+print("18.Logarithm(a base b)")
 
 while True:
     choice = input("Enter choice: ")
@@ -76,7 +80,7 @@ while True:
         print("Exiting...")
         sys.exit()
     
-    if choice in ('1', '2', '3', '4', '5', '6', '16', '17'):
+    if choice in ('1', '2', '3', '4', '5', '6', '16', '17', '18'):
         try:
             num1 = float(input("Enter first number: "))
             num2 = float(input("Enter second number: "))
@@ -107,6 +111,9 @@ while True:
 
         elif choice == '17':
             print(num1, "%", " of", num2, "=", percentage2(num1, num2))
+        
+        elif choice == '18':
+            print("log", num1, "base", num2, "=", logarithm_generalised(num1, num2))
           
     if choice in ('7', '8', '9', '10', '11', '12', '13', '14', '15'):
         try:
@@ -125,7 +132,7 @@ while True:
             print("exp", num1, "=", exponential(num1))
 
         elif choice == '10':
-            print(num1, "!", "=", factorial(num1))
+            print(num1, "!", "=", factorial(int(num1)))
         
         elif choice == '11':
             print("sin", num1, "=", sine(num1))
@@ -143,7 +150,7 @@ while True:
     if next_calculation == "no":
         sys.exit()
 else:
-    print("Invalid input. Please enter a number from 1 to 17.")
+    print("Invalid input. Please enter a number from 1 to 18.")
 
     
     
