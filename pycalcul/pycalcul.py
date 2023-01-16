@@ -36,16 +36,16 @@ def factorial(x):
     return math.factorial(x)
 
 def sine(x):
-    return math.sin(x)
+    return math.sin(math.radians(x))
 
 def cosine(x):
-    return math.cos(x)
+    return math.cos(math.radians(x))    
 
 def tangent(x):
-    return math.tan(x)
+    return math.tan(math.radians(x))
 
 def cotangent(x):
-    return 1 / math.tan(x)
+    return 1 / math.tan(math.radians(x))
 
 def percentage1(x, y):
     return (x/y)*100
@@ -55,95 +55,91 @@ def percentage2(x, y):
 
 
 print("Select operation:")
-print("1.Add")
-print("2.Subtract")
-print("3.Multiply")
-print("4.Divide")
-print("5.Rest of division")
-print("6.Power")
-print("7.Square root")
-print("8.Natural Logarithm")
-print("9.Exponential")
-print("10.Factorial")
-print("11.Sine")
-print("12.Cosine")
-print("13.Tangent")
-print("14.Cotangent")
-print("15.Exit")
-print("16.Percentage(a from b)")
-print("17.Percentage(a percent of b)")
-print("18.Logarithm(a base b)")
+print("Add(+)")
+print("Subtract(-)")
+print("Multiply(*)")
+print("Divide(/)")
+print("Rest of division(%)")
+print("Power(^)")
+print("Square root(sqrt)")
+print("Logarithm(a base b)(log)")
+print("Natural Logarithm(ln)")
+print("Exponential(exp)")
+print("Factorial(!)")
+print("Sine(sin)")
+print("Cosine(cos)")
+print("Tangent(tan)")
+print("Cotangent(cot)")
+print("Exit")
+print("Percentage(a from b)(%1)")
+print("Percentage(a percent of b)(%2)")
+
 
 while True:
+    num1 = float(input("Enter first number: "))
     choice = input("Enter choice: ")
     if choice == '15':
         print("Exiting...")
         sys.exit()
     
-    if choice in ('1', '2', '3', '4', '5', '6', '16', '17', '18'):
+    if choice in ('+', '-', '*', '/', '%', '^', '%1', '%2', 'log'):
         try:
-            num1 = float(input("Enter first number: "))
             num2 = float(input("Enter second number: "))
         except ValueError:
             print("Invalid input. Please enter a number.")
             continue
 
-        if choice == '1':
+        if choice == '+':
             print(num1, "+", num2, "=", add(num1, num2))
 
-        elif choice == '2':
+        elif choice == '-':
             print(num1, "-", num2, "=", subtract(num1, num2))
 
-        elif choice == '3':
+        elif choice == '*':
             print(num1, "*", num2, "=", multiply(num1, num2))
 
-        elif choice == '4':
+        elif choice == '/':
             print(num1, "/", num2, "=", divide(num1, num2))
 
-        elif choice == '5':
-            print(int(num1), "%", int(num2), "=", rest_div(num1, num2))
+        elif choice == '%':
+            print(int(num1), "%", int(num2), "=", int (divide (num1, num2)), "rest", rest_div(num1, num2))
         
-        elif choice == '6':
+        elif choice == '^':
             print(num1, "^", num2, "=", power(num1, num2))
 
-        elif choice == '16':
+        elif choice == '%1':
             print(num1, "%->", num2, "=", percentage1(num1, num2))
 
-        elif choice == '17':
+        elif choice == '%2':
             print(num1, "%", " of", num2, "=", percentage2(num1, num2))
         
-        elif choice == '18':
+        elif choice == 'log':
             print("log", num1, "base", num2, "=", logarithm_generalised(num1, num2))
           
-    if choice in ('7', '8', '9', '10', '11', '12', '13', '14', '15'):
-        try:
-            num1 = float(input("Enter number: "))
-        except ValueError:
-            print("Invalid input. Please enter a number.")
-            continue
+    if choice in ('sqrt', 'ln', 'exp', '!', 'sin', 'cos', 'tan', 'cot'):
 
-        if choice == '7':
+        if choice == 'sqrt':
             print(num1, "^ 0.5", "=", square_root(num1))
         
-        elif choice == '8':
-            print("log", num1, "=", logarithm(num1))
+        elif choice == 'ln':
+            print("ln", num1, "=", logarithm(num1))
         
-        elif choice == '9':
+        elif choice == 'exp':
             print("exp", num1, "=", exponential(num1))
 
-        elif choice == '10':
+        elif choice == '!':
             print(num1, "!", "=", factorial(int(num1)))
         
-        elif choice == '11':
+        elif choice == 'sin':
             print("sin", num1, "=", sine(num1))
         
-        elif choice == '12':
+        elif choice == 'cos':
             print("cos", num1, "=", cosine(num1))
 
-        elif choice == '13':
+        elif choice == 'tan':
             print("tan", num1, "=", tangent(num1))
 
-        elif choice == '14':
+        elif choice == 'cot':
             print("cot", num1, "=", cotangent(num1))
     
     next_calculation = input("Continue? (yes/no): ")
