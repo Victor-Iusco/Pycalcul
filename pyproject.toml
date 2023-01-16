@@ -4,7 +4,7 @@ build-backend = "poetry.core.masonry.api"
 
 [tool.poetry]
 name = "pycalcul"
-version = "2.1"
+version = "3.0"
 description = "my very first calculator"
 readme = "readme.txt"
 authors = [ "LOLpotatoe <victorstefaniusco@gmail.com>", "rares9301 <raressarmasag@gmail.com>", ]
