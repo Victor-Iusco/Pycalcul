@@ -12,4 +12,4 @@
 
 5 Enjoy your new python calculator that i hope by the time someone actually reads this has a graphical interface :)
 
-If u notice any bugs or weird prints from pycalcul don't hesitate to message me on discord at LOLpotatoe#1068, issue it on github on my account or email me and victorstefaniusco@gmail.com.
+If u notice any bugs or weird prints from pycalcul don't hesitate to message me on discord at -lolpotatoe-, issue it on github on my account or email me and victorstefaniusco@gmail.com.
